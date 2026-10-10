@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#100d15" />
+  <meta name="description" content="Album berisi 30 foto, musik, dan kenangan My Fav Person 2025." />
+  <meta name="color-scheme" content="dark" />
+  <title>Galeri Momen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== Background Blur Layer ====== -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+  </div>
+
+  <!-- ====== Top Bar (iOS Glass) ====== -->
+  <nav class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.5 14.4a.6.6 0 0 1-.83.2c-2.27-1.39-5.13-1.7-8.5-.93a.6.6 0 1 1-.27-1.17c3.68-.84 6.85-.48 9.4 1.07.29.18.38.55.2.83zm1.2-2.7a.75.75 0 0 1-1.03.25c-2.6-1.6-6.56-2.06-9.63-1.13a.75.75 0 1 1-.44-1.44c3.51-1.06 7.87-.55 10.86 1.29.35.22.46.68.24 1.03zm.1-2.8C14.7 9.05 9.4 8.87 6.44 9.77a.9.9 0 1 1-.52-1.72c3.4-1.03 9.25-.83 12.9 1.33a.9.9 0 0 1-.92 1.55z"/>
+        </svg>
+      </div>
+      <span class="brand-name">My Fav Person</span>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" aria-label="Cari">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="m21 21-4.3-4.3"/>
+        </svg>
+      </button>
+      <button class="avatar-btn" aria-label="Profil">S</button>
+    </div>
+  </nav>
+
+  <!-- ====== Hero ====== -->
+  <header class="hero">
+    <p class="hero-sub">My Fav Person</p>
+    <h1 class="hero-title">2025</h1>
+    <p class="hero-desc">30 FOTO KENANGAN KITA</p>
+    <p class="hero-desc">in another life, hopefully we can be together again, okay?</p>
+    <div class="hero-actions" aria-label="Aksi cepat">
+      <button class="hero-action hero-action-primary" id="randomMemory" type="button"><span aria-hidden="true">✦</span> Acak kenangan</button>
+      <button class="hero-action" id="favoriteFilter" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Foto favorit</button>
+      <button class="hero-action" id="letterJump" type="button"><span aria-hidden="true">✉</span> Baca surat</button>
+    </div>
+  </header>
+
+  <!-- ====== Galeri Foto 9:16 ====== -->
+  <main class="galeri-wrapper">
+    <div class="galeri-header">
+      <h2 class="section-title">Semua Foto</h2>
+      <span class="section-count">36 kenangan</span>
+    </div>
+
+    <div class="galeri" id="galeri">
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="1.jpg" alt="Foto 1" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>27 April 2025</h3>
+          <p>ini pap paling imut kamu</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="2.jpg" alt="Foto 2" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>3 Mei 2025</h3>
+          <p>pulang sekolah kamu pap ke aku</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="3.jpg" alt="Foto 3" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>6 Mei 2025</h3>
+          <p>pap selfie mirior yg kmu kirim</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="4.jpg" alt="Foto 4" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>8 Mei 2025</h3>
+          <p>Kamu imut kalo gini.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="5.jpg" alt="Foto 5" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>13 Mei 2025</h3>
+          <p>Kamu cantik banget habis mandi.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="6.jpg" alt="Foto 6" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>17 Mei 2025</h3>
+          <p>Belajar pake makeup, dan hasilnya cantik.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="7.jpg" alt="Foto 7" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>19 Mei 2025</h3>
+          <p>Foto pas lagi jajan.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="8.jpg" alt="Foto 8" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>21 Mei 2025</h3>
+          <p>Selfie mirror pas mau main.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="9.jpg" alt="Foto 9" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>28 Mei 2025</h3>
+          <p>Pulang renang pap ke aku.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="10.jpg" alt="Foto 10" loading="lazy" />
+          <button class="card-play" aria-label="Putar"></button>
+        </div>
+        <div class="pesan">
+          <h3>29 Mei 2025</h3>
+          <p>Habis mandi pap mirror kirim ke aku.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="11.jpg" alt="Foto 11" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 11"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #11</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="12.jpg" alt="Foto 12" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 12"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #12</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="13.jpg" alt="Foto 13" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 13"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #13</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="14.jpg" alt="Foto 14" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 14"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #14</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="15.jpg" alt="Foto 15" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 15"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #15</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="16.jpg" alt="Foto 16" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 16"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #16</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="17.jpg" alt="Foto 17" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 17"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #17</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="18.jpg" alt="Foto 18" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 18"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #18</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="19.jpg" alt="Foto 19" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 19"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #19</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="20.jpg" alt="Foto 20" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 20"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #20</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="21.jpg" alt="Foto 21" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 21"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #21</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="22.jpg" alt="Foto 22" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 22"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #22</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="23.jpg" alt="Foto 23" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 23"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #23</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="24.jpg" alt="Foto 24" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 24"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #24</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="25.jpg" alt="Foto 25" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 25"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #25</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="26.jpg" alt="Foto 26" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 26"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #26</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="27.jpg" alt="Foto 27" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 27"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #27</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="28.jpg" alt="Foto 28" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 28"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #28</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="29.jpg" alt="Foto 29" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 29"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #29</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="30.jpg" alt="Foto 30" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 30"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #30</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="31.jpg" alt="Foto 31" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 31"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #31</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="32.jpg" alt="Foto 32" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 32"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #32</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="33.jpg" alt="Foto 33" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 33"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #33</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="34.jpg" alt="Foto 34" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 34"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #34</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="35.jpg" alt="Foto 35" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 35"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #35</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto-wrap">
+          <img src="36.jpg" alt="Foto 36" loading="lazy" />
+          <button class="card-play" aria-label="Putar kenangan 36"></button>
+        </div>
+        <div class="pesan">
+          <h3>Kenangan #36</h3>
+          <p>Halaman kecil yang menyimpan cerita kita.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== Surat (glass) ====== -->
+  <section class="letter" id="letter" aria-label="Surat">
+    <div class="letter-glass">
+      <span class="letter-mark" aria-hidden="true">&ldquo;</span>
+
+      <p class="letter-lead" style="--p:0">Aku Buat Ini Karna Aku belum Move On Sama Kamu.</p>
+
+      <p style="--p:1">Dan Aku Gabisa Lupa Sama Masa Masa Kita. Aku Masih Cinta Sama Kamu, Aku Coba Buat Suka Sama Seseorang. Tapi, Hati Aku Cuma Bisa Cinta Ke Kamu, Meskipun Sudah 3 Tahun Lalu Aku Gabisa Lupain Kamu.</p>
+
+      <p class="letter-end" style="--p:2">In Another Life Hopefully we can be together again, okay?</p>
+
+      <p class="letter-sign" style="--p:3">I Still Love You - Randi.</p>
+    </div>
+  </section>
+
+  <!-- ====== CARD BARU: My First Love and My Last Love is You ====== -->
+  <section class="love-letter" id="loveLetter" aria-label="Pesan cinta">
+    <div class="love-card">
+      <h2 class="love-title">My First Love and My Last Love is You</h2>
+
+      <p>Aku makasi banget sama kamu, udah buat aku bahagia di dunia ini, sejuta kata maaf untukmu, maaf kalo aku sering ganggu kamu, maaf kalo aku udah buat risih kamu, maaf kalo aku terlalu berlebihan sama kamu, maaf kalo kelakuan ku berlebihan, maaf udah buat kamu kecewa, maafin diri aku ya</p>
+
+      <p>dan sejuta kata makasi untukmu, makasih udah buat aku bahagia, makasih udah buat hari hari ku berwarna, makasih udah buat perasaan aku bahagia setiap ketemu kamu, makasih udah ngasih waktu mu untuk ku, makasih udah buat aku sebahagia ini, makasih udah jadi bagian dari hidup aku, makasih karna kamu aku jadi semangat mengejar masa depan.</p>
+
+      <p>semoga kita bertemu lagi ya di versi terbaik kita masing masing, dan terimakasih udah ngeluangin waktu buat hubungan yg sudah berakhir ini</p>
+
+      <p>makasih.</p>
+
+      <p class="love-end">I Always Like You and Always Love You</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-heart" aria-hidden="true">♥</span>
+    <p>Dibuat dari kenangan kecil yang berarti.</p>
+    <span class="footer-caption">MY FAV PERSON · 2025</span>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas">↑</button>
+  <div class="player-spacer"></div>
+
+  <!-- =====================================================
+       PEMUTAR MUSIK — gaya Spotify + iOS Glass
+  ====================================================== -->
+  <section class="player" aria-label="Pemutar Musik">
+
+    <!-- ===== 1. MINI PLAYER ===== -->
+    <div class="mini" id="mini" role="button" tabindex="0" aria-label="Buka pemutar">
+      <img class="mini-cover" id="miniCover" src="1.jpg" alt="" />
+
+      <div class="mini-info">
+        <p class="mini-title" id="miniTitle">Memuat…</p>
+        <p class="mini-artist" id="miniArtist">My Fav Person</p>
+      </div>
+
+      <div class="mini-volume" id="miniVolume">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/>
+        </svg>
+        <input class="vol" id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Volume" />
+      </div>
+
+      <button class="mini-btn" id="miniLike" aria-label="Simpan ke Disukai" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+
+      <button class="mini-btn" id="miniPlay" aria-label="Putar / Jeda">
+        <svg class="i-play" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4.2" height="16" rx="1.2"/><rect x="13.8" y="4" width="4.2" height="16" rx="1.2"/></svg>
+      </button>
+
+      <div class="mini-progress" aria-hidden="true"><span id="miniFill"></span></div>
+    </div>
+
+    <!-- ===== 2. NOW PLAYING ===== -->
+    <div class="np" id="np" aria-hidden="true" role="dialog" aria-label="Sedang diputar">
+      <img class="np-bg" id="npBg" src="1.jpg" alt="" aria-hidden="true" />
+      <div class="np-shade" aria-hidden="true"></div>
+
+      <div class="np-inner">
+
+        <div class="np-head">
+          <button class="np-btn" id="npClose" aria-label="Tutup">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="np-head-title">
+            <small>Diputar dari playlist</small>
+            <strong>My Fav Person 2025</strong>
+          </div>
+          <button class="np-btn" id="npMore" aria-label="Lainnya">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="19" cy="12" r="1.9"/></svg>
+          </button>
+        </div>
+
+        <div class="np-art">
+          <img class="np-cover" id="npCover" src="1.jpg" alt="Cover" />
+        </div>
+
+        <div class="np-info">
+          <div class="np-meta">
+            <p class="np-title" id="npTitle">Memuat…</p>
+            <p class="np-artist" id="npArtist">My Fav Person</p>
+          </div>
+          <button class="np-btn np-like" id="npLike" aria-label="Simpan ke Disukai" aria-pressed="false">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="np-progress">
+          <div class="np-bar" id="npBar" role="slider" tabindex="0" aria-label="Posisi lagu" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="np-fill" id="npFill"></div>
+            <div class="np-thumb" id="npThumb"></div>
+          </div>
+          <div class="np-times">
+            <span id="currentTime">0:00</span>
+            <span id="duration">-0:00</span>
+          </div>
+        </div>
+
+        <div class="np-controls">
+          <button class="np-btn" id="shuffleBtn" aria-label="Acak" aria-pressed="false">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="m4 4 5 5"/></svg>
+          </button>
+          <button class="np-btn" id="prevBtn" aria-label="Sebelumnya">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true"><path d="M6 5h2.2v14H6zM20 5.6v12.8a.6.6 0 0 1-.94.5L9.7 12.5a.6.6 0 0 1 0-1L19.06 5.1a.6.6 0 0 1 .94.5z"/></svg>
+          </button>
+          <button class="np-btn np-play" id="playBtn" aria-label="Putar / Jeda">
+            <svg class="i-play" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><rect x="5.5" y="4" width="4.6" height="16" rx="1.3"/><rect x="13.9" y="4" width="4.6" height="16" rx="1.3"/></svg>
+          </button>
+          <button class="np-btn" id="nextBtn" aria-label="Berikutnya">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true"><path d="M15.8 5h2.2v14h-2.2zM4 5.6v12.8a.6.6 0 0 0 .94.5l9.36-6.4a.6.6 0 0 0 0-1L4.94 5.1A.6.6 0 0 0 4 5.6z"/></svg>
+          </button>
+          <button class="np-btn" id="loopBtn" aria-label="Ulangi lagu" aria-pressed="false">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+          </button>
+        </div>
+
+        <div class="np-foot">
+          <button class="np-btn small" id="deviceBtn" aria-label="Perangkat">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2.5"/><circle cx="12" cy="14.5" r="3.5"/><path d="M12 6h.01"/></svg>
+          </button>
+          <div class="np-foot-right">
+            <button class="np-btn small" id="shareBtn" aria-label="Bagikan">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></svg>
+            </button>
+            <button class="np-btn small" id="queueBtn" aria-label="Antrean">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h13"/><path d="M3 12h9"/><path d="M3 18h9"/><path d="m16 13 6 4-6 4z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="queue" id="queue" aria-label="Antrean">
+        <div class="queue-grab" aria-hidden="true"></div>
+        <div class="queue-head">
+          <h2>Antrean</h2>
+          <button class="np-btn small" id="queueClose" aria-label="Tutup antrean">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <ul class="queue-list" id="queueList"></ul>
+      </div>
+
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <audio id="audio" preload="metadata"></audio>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
